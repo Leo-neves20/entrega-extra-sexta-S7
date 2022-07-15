@@ -13,7 +13,8 @@ function getAnagramsOf(input){
 const button = document.getElementById("findButton");
 button.addEventListener("click", function () {
 
-   const word = [] 
+   const word = []
+
    let typedText = document.getElementById("input").value;
    word.push(typedText)
      
@@ -31,9 +32,10 @@ button.addEventListener("click", function () {
 
     }
 
+    let arrayStrnig = result.toString().replace(/,/g," ")
+
     let textContent = document.createElement("p")
-    textContent.innerText = result
-    
+    textContent.innerText = arrayStrnig 
     return body.appendChild(textContent)
 
 });
